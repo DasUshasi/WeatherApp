@@ -1,0 +1,22 @@
+#form{
+    width: 70vw;
+    /* border: 2px solid black; */
+    padding: 10px;
+    background-image: linear-gradient(to right, rgb(253, 140, 158), rgb(240, 185, 253), rgb(134, 235, 253));
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+#ogbody{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 450px){
+    #form{
+        width: 95vw;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}

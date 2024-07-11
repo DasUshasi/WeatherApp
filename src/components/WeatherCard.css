@@ -1,0 +1,21 @@
+#maincard {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    font-size: 20px;
+    border: 2px solid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    row-gap: 5px;
+    border-radius: 5px;
+}
+
+.big {
+    font-size: x-large;
+}
+
+.bigger {
+    font-size: xx-large;
+}
