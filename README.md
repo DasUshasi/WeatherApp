@@ -1,4 +1,4 @@
-Weather App
+## Weather App
 
 This project uses the OpenWeather API to fetch weather conditions for a selected city. The user can choose a country from a list of all available countries, then pick a city within that country. The app retrieves the latitude and longitude of the chosen location and displays the weather information, including the weather forecast for the next 5 hours and 3 days.
 
