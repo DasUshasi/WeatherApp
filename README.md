@@ -33,7 +33,7 @@ This project uses the OpenWeather API to fetch weather conditions for a selected
 - **Tech stack**: HTML, CSS, React JS, Bootstrap
 
 Here is how the form looks where the user enters country and city:
-![Screenshot 2025-02-09 123004](https://github.com/user-attachments/assets/0e5ca267-9f7e-4db4-8ced-52031cbd7a09)
+![Screenshot 2025-02-11 214549](https://github.com/user-attachments/assets/257aff2a-fe26-477c-ac22-c1d33618c9e6)
 
 Here is a snap of list of countries that user can choose from:
 ![Screenshot 2025-02-09 123211](https://github.com/user-attachments/assets/2eab6da5-0550-4e6c-a4ce-c6b1bebbae39)
