@@ -1,0 +1,10 @@
+body {
+    background-color: rgb(210, 234, 255);
+}
+
+#heading {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    margin-bottom: 5px;
+    font-family: "Righteous", serif;
+    text-align: center;
+}
