@@ -8,6 +8,7 @@ function App() {
 
   return (
     <div id="App">
+      <div id='heading'>WEATHER APP</div>
       <MountCountryFunc countryname={'India'} cityname={'Kalyani'} key_openweathermap={key_openweathermap} key_weatherapi={key_weatherapi} key_ipgeolocation={key_ipgeolocation} />
     </div>
   );
