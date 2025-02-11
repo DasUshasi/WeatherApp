@@ -27,21 +27,27 @@ export default function MountCountryFunc(props) {
         setStart(true)
     }
     useEffect(() => {
-        isLoading(true)
         if (start) {
-            const countrycode = countryList().getValue(country)
-            const url = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + ',' + countrycode + '&appid=' + props.key_openweathermap + '&units=metric';
-            fetch(url)
-                .then((response) => response.json())
-                .then((json) => {
-                    setLat(json.coord.lat);
-                    setLon(json.coord.lon)
-                })
-                .catch((error) => isInvalid(true))
+            isLoading(true)
+            if (start) {
+                const countrycode = countryList().getValue(country)
+                const url = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + ',' + countrycode + '&appid=' + props.key_openweathermap + '&units=metric';
+                fetch(url)
+                    .then((response) => response.json())
+                    .then((json) => {
+                        setLat(json.coord.lat);
+                        setLon(json.coord.lon)
+                    })
+                    .catch((error) => isInvalid(true))
+            }
+            var str = city.charAt(0).toUpperCase() + city.slice(1)
+            setCity(str)
+            setTimeout(() => {
+                isLoading(false)
+            }, 2000);
+            setStart(false)
+            setShow(true)
         }
-        setStart(false)
-        isLoading(false)
-        setShow(true)
     })
     return (
         <div id='ogbody'>
@@ -70,7 +76,7 @@ export default function MountCountryFunc(props) {
                         <span className="visually-hidden">Loading...</span>
                     </div>
                 </div>}
-            {invalid && <Alert msg={"Invalid Location"} style={{ marginTop: 50 + "px" }} />}
+            {!loading && invalid && <Alert msg={"Invalid Location"} style={{ marginTop: 50 + "px" }} />}
             {!loading && lat !== null && show && <MountWeatherFunc lat = {lat} lon = {lon} countryname = {country} cityname = {city} key_openweathermap = {props.key_openweathermap} key_weatherapi = {props.key_weatherapi} key_ipgeolocation = {props.key_ipgeolocation} />}
         </div >
     )
